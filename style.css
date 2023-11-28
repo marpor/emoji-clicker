@@ -1,0 +1,104 @@
+html,
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  /* Prevent selection, double-tap to zoom etc. */
+  user-select: none;
+  touch-action: pan-y;
+}
+
+#game {
+  text-align: center;
+}
+
+#game button {
+  background: rgba(0, 0, 0, 0.125);
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 64px;
+  cursor: pointer;
+  box-shadow: 0 5px #999;
+}
+
+#game button:active {
+  background-color: #ccc;
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
+}
+
+#total {
+  font-size: 32px;
+  margin: 20px;
+}
+
+#upgrades {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.upgrade {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px;
+  font-size: 14px;
+}
+
+.upgrade .name {
+  font-weight: bold;
+}
+
+.upgrade .count {
+  font-weight: bold;
+  font-size: 20px;
+  width: 2em;
+  text-align: right;
+}
+
+.upgrade button {
+  background: rgba(0, 0, 0, 0.125);
+  border: none;
+  padding: 6px;
+  border-radius: 5px;
+  font-size: 28px;
+  width: 2em;
+  height: 2em;
+  cursor: pointer;
+  box-shadow: 0 3px #999;
+}
+
+.upgrade button:active {
+  background: #ccc;
+  box-shadow: 0 1px #666;
+  transform: translateY(2px);
+}
+
+.upgrade.click button {
+  background: rgba(0, 128, 0, 0.125);
+}
+
+.upgrade.farm button,
+.upgrade.efficiency button {
+  background: rgba(128, 128, 0, 0.125);
+}
+
+.upgrade.auto button {
+  background: rgba(0, 32, 172, 0.125);
+}
+
+.upgrade.speed button {
+  background: rgba(128, 0, 0, 0.125);
+}
+
+.upgrade.hidden {
+  display: none;
+}
+
+.upgrade.locked {
+  opacity: 0.5;
+}
+
+.upgrade.locked button {
+  cursor: not-allowed;
+  color: transparent;
+}

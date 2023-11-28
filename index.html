@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Emoji Clicker</title>
+  <link href="two-col.css" rel="stylesheet" type="text/css" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <div class="left">
+    <div id="game">
+      <h1>Emoji Clicker</h1>
+  
+      <button><span id="emoji">😊</span></button>
+  
+      <div class="stats">
+        <p id="total">0</p>
+        <p>Per click: <span id="per-click">1</span></p>
+        <p>Per second: <span id="per-second">0</span></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="right" id="upgrades">
+    <!--
+      Template for an upgrade.
+        
+      This will be replaced with a copy for each upgrade defined in upgrades.js.
+    
+      Any elment with a class from this list will be replaced:
+        .emoji .name .description .count .cost
+    
+      Also the top level node will dynamically have the classes
+        .hidden and .locked
+      added and removed as necessary.
+    -->
+    <div id="TEMPLATE" class="upgrade">
+      <div class="count">0</div>
+      <button class="emoji">👆</button>
+      <div class="details">
+        <div class="name">Extra Click</div>
+        <div class="description">+1 click</div>
+        <div>Cost: <span class="cost">10</span></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="upgrades.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

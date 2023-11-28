@@ -1,0 +1,35 @@
+/** Basic Two-Column Responsive layout with left and right divs **/
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-columns: auto 300px;
+  height: 100vh;
+}
+
+.left {
+  display: flex;
+  justify-content: center;
+}
+
+.right {
+  overflow-y: auto;
+}
+
+@media (max-width: 600px) {
+
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  .right {
+    width: 100%;
+  }
+}
