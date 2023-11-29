@@ -193,7 +193,10 @@ function makeUpgradeElementFromTemplate(template, upgrade) {
 /**
   Formats number as text.
 
-  Large numbers will be shown without decimals, using thin spaces for thousands separators.
+  Large numbers will be shown without decimals, using *thin spaces* for thousands 
+  separators. While not a standard it looks cleaner with *very* large 
+  numbers, and allow the number text to break cleanly across multiple lines.
+
   Small numbers will be shown with decimals, using dot (.) for decimal separator.
 
   Examples:
@@ -218,8 +221,8 @@ function formatNumber(number) {
   // sure we get a number like 1,000.00
   let text = number.toLocaleString('en-US', options);
 
-  // Replace commas with thin spaces
-  text = text.replace(/,/g, ' '); // <- unicode "thin space" character (U+2009)
+  // Replace commas with thin spaces.
+  text = text.replaceAll(',', ' '); // <- That's a unicode "thin space" character (U+2009)
 
   return text;
 }
